@@ -1,0 +1,52 @@
+Cenário: Verificação de disponibilidade
+Dado o usuário acessa o site reservas online
+E seleciona a data de 08/08/2025 à 10/08/2025 atribuindo 2 adultos e 1 criança free
+Quando clica nos botões “não sou um robô” e “verificar disponibilidade”
+Então o motor de reservas apresenta as categorias que se enquadram na pesquisa.
+
+Motivo: Verificar a integração de disponibilidade do PMS para o webreservas e garantir a eficiência do principal processo do motor.
+
+
+
+
+
+
+
+Cenário: Verificar êxito na reserva com opcionais
+Dado o usuário acessa o site reservas online
+E seleciona a data de 03/09/2025 à 05/09/2025 atribuindo 3 adultos
+E clica nos botões “não sou um robô” e “verificar disponibilidade”
+E abre as opções de categorias que se enquadram na pesquisa desejada
+E adiciona o quarto, clica em continuar e escolhe o opcional de pet e salva
+Então o motor de reservas adiciona os valores no valor final da reserva e confirma as informações gerando a nova reserva.
+
+Motivo: Verificar o sucesso da reserva com opcionais.
+
+
+
+
+
+
+Cenário: Reserva com pagamento PIX
+Dado o usuário acessa o motor de reservas
+E seleciona a data inicial de 08/08/2025 à 11/08/2025 com 2 adultos, 1 criança free e 1 criança pagante
+E clica nos botões de "não sou um robô" e "verificar disponibilidade"
+E o motor apresenta as categorias e valores correspondente a pesquisa
+Quando seleciona a categoria desejada, após clica em continuar, e inserir todos os dados obrigatórios
+Então o site apresenta a etapa de pagamento via PIX sendo gerado com sucesso o QRCODE.
+
+Motivo: Garantir que a funcionalidade do pagamento via PIX seja processada de forma esperada.
+
+
+
+
+
+
+
+Cenário: Verificar sucesso nos valores conforme quantidade de pessoas
+Dado o usuário acessa o reservas online
+E seleciona o período de 24/09/2025 à 26/09/2024 sem atribuição de pessoas
+E faz a verificação de não sou um robô e o motor apresenta as opções de categoria para a data desejada
+Quando o usuário seleciona 1 adulto é valor X e quando adiciona 2 adultos é valor Y, conforme tabela de preço.
+
+Motivo: Garantir a eficiência da integração de valores entre o CHANNEL e ROL.
